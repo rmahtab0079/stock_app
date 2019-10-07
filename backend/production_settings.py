@@ -1,7 +1,7 @@
 from .settings import *
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "assets"),
+    os.path.join(os.path.dirname(BASE_DIR), "assets"),
 ]
 
 WEBPACK_LOADER = {
