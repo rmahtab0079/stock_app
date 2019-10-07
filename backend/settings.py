@@ -31,11 +31,18 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# WEBPACK_LOADER = {
+#     'DEFAULT': {
+#             'BUNDLE_DIR_NAME': 'bundles/',
+#             'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.dev.json'),
+#         }
+# }
+
 WEBPACK_LOADER = {
     'DEFAULT': {
-            'BUNDLE_DIR_NAME': 'bundles/',
-            'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.dev.json'),
-        }
+    'BUNDLE_DIR_NAME': 'bundles/',
+    'STATS_FILE': os.path.join(os.path.dirname(BASE_DIR), 'webpack-stats.dev.json'),
+    }   
 }
 
 INSTALLED_APPS = [
