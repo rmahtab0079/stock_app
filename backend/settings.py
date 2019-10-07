@@ -48,7 +48,8 @@ WEBPACK_LOADER = {
 INSTALLED_APPS = [
     'webpack_loader',
     'whitenoise.runserver_nostatic',
-    'livesync',
+    # 'livesync',
+    # 'django_livesync',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -59,7 +60,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'livesync.core.middleware.DjangoLiveSyncMiddleware',
+    # 'livesync.core.middleware.DjangoLiveSyncMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
