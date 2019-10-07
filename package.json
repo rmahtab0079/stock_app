@@ -68,7 +68,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "watch": "webpack --config webpack.config.js --watch --mode development"
+    "watch": "webpack --mode production --config ./webpack.prod.config.js",
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -86,8 +86,7 @@
     ]
   },
   "devDependencies": {
-    "webpack-bundle-tracker": "^0.4.3",
-    "webpack-cli": "^3.3.9"
+    "webpack-bundle-tracker": "^0.4.3"
   },
   "jest": {
     "roots": [
