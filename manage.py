@@ -3,6 +3,8 @@
 import os
 import sys
 
+def chor_branch():
+    return "hllo"
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
