@@ -1,96 +1,102 @@
 # Project Title
 
+A brief description of what this project does and its purpose.
+
+## Table of Contents
+- [Overview](#overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Structure](#code-structure)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Overview
 
-This project is a web application built using React for the frontend and Django for the backend. The application utilizes Webpack for module bundling and includes features such as routing, API calls, and service workers for offline capabilities. The project is structured to facilitate easy development and deployment.
+This project is a web application built using Django for the backend and React for the frontend. It provides a portfolio management system where users can log in and manage their stock portfolios. The application uses Webpack for module bundling and includes a service worker for offline capabilities.
 
-## Major Components
+## Installation
 
-1. **Frontend (React)**: 
-    - The frontend is built using React and utilizes React Router for client-side routing.
-    - Key components include:
-        - `App.js`: Main application component that sets up routing.
-        - `Home.js`, `Login.js`, `Portfolio.js`, `NotFound.js`: Various pages of the application.
-        - Styling is handled through a CSS file.
+To get started with this project, follow these steps:
 
-2. **Backend (Django)**:
-    - The backend is built using Django and Django REST framework, providing API endpoints.
-    - The settings are configured to work with Webpack through `django-webpack-loader`.
-    - Static and media file handling is set up using Whitenoise.
+1. **Clone the repository:**
 
-3. **Webpack**:
-    - Webpack is used for bundling JavaScript files and assets. The configuration is set up to handle different file types, including JavaScript, CSS, and images.
-    - It also includes optimizations for production builds.
+   ```bash
+   git clone https://github.com/yourusername/yourproject.git
+   cd yourproject
+   ```
 
-4. **Proxy Setup**:
-    - The application uses `http-proxy-middleware` to redirect API requests to the Django backend during development.
+2. **Set up the backend (Django):**
 
-## Installation Instructions
+   - Navigate to the backend directory.
+   - Create a virtual environment and activate it.
+   - Install the required packages:
 
-To set up this project locally, follow these steps:
+   ```bash
+   cd backend
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   pip install -r requirements.txt
+   ```
 
-### Prerequisites
-- Node.js and npm (or Yarn)
-- Python 3 and pip
-- Django and other required Python packages
+3. **Set up the frontend (React):**
 
-### Steps
+   - Navigate to the frontend directory and install dependencies:
 
-1. **Clone the repository**:
-    ```bash
-    git clone <repository_url>
-    cd <repository_directory>
-    ```
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-2. **Install frontend dependencies**:
-    ```bash
-    cd frontend
-    npm install
-    # or
-    yarn install
-    ```
+4. **Run database migrations:**
 
-3. **Install backend dependencies**:
-    ```bash
-    cd backend
-    pip install -r requirements.txt
-    ```
+   ```bash
+   python manage.py migrate
+   ```
 
-4. **Configure environment variables**:
-    - Create a `.env` file in the backend directory and add the necessary environment variables.
-  
-5. **Run the backend server**:
-    ```bash
-    cd backend
-    python manage.py runserver
-    ```
+5. **Run the development servers:**
 
-6. **Run the frontend development server**:
-    ```bash
-    cd frontend
-    npm start
-    # or
-    yarn start
-    ```
+   - Start the Django server:
 
-## Usage Instructions
+   ```bash
+   python manage.py runserver
+   ```
 
-- Open your browser and navigate to `http://localhost:3000` to access the React application.
-- The application includes routes for the home page, login, and portfolio.
-- Use the provided links to navigate between pages.
-- The backend API is available at `http://localhost:8000/api` (ensure the Django server is running).
+   - In another terminal, start the React development server:
 
-## Additional Information
+   ```bash
+   npm start
+   ```
 
-- The project is set up to support both development and production builds.
-- To create a production build of the frontend, run:
-    ```bash
-    npm run build
-    # or
-    yarn build
-    ```
-- The backend settings are configured to work with Heroku for deployment.
+## Usage
+
+- Access the application by navigating to `http://localhost:3000` in your web browser.
+- Use the login route (`/login`) to authenticate and access the portfolio management features.
+- If you encounter a page that doesn't exist, you'll be redirected to a "Not Found" page.
+
+## Code Structure
+
+The code is organized into two main directories:
+
+1. **Backend (Django):**
+   - **`settings.py`**: Contains all the configurations for the Django application.
+   - **`urls.py`**: Manages the URL routing for the application.
+   - **`views.py`**: Contains the logic for handling requests and responses.
+
+2. **Frontend (React):**
+   - **`src/index.js`**: Entry point for the React application.
+   - **`src/App.js`**: Main application component that manages routing.
+   - **`src/components/`**: Contains various React components like `Home`, `Portfolio`, `Login`, and `NotFound`.
+
+3. **Webpack Configuration**: Handles the bundling of JavaScript files and assets.
+
+## Contributing
+
+If you would like to contribute to this project, feel free to submit a pull request or open an issue for discussion. Be sure to follow the project's code of conduct and adhere to the coding standards.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+---
+
+Feel free to modify this README to better fit your project's specifics!
