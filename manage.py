@@ -3,6 +3,9 @@
 import os
 import sys
 
+def hello():
+    pass
+
 def chor_branch():
     return "hllo"
 
